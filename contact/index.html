@@ -10,19 +10,28 @@
 <nav>
    <a href="/portfoliowebsite/">Home Page</a>
     <a href="/portfoliowebsite/projects/">Projects</a>
-    <a href="/portfoliowebsite/contact/">Contact</a>
+    <a class="current" href="/portfoliowebsite/contact/">Contact</a>
     <a href="https://github.com/gabetedja">GitHub</a>
     <a href="/portfoliowebsite/resume/">Resume</a>
 </nav>
     <h1>Contact</h1>
-    <form action="mailto:gabrieldtedja@gmail.com" method="POST" enctype="text/plain">
-        <input name="email" type="email" id="email">
-        <label for="email">Email</label>
-        <input name="subject" id="subject">
-        <label for="subject">Subject</label>
-        <textarea name="body" id="body"></textarea>
-        <label for="Body">Body Text</label>
-        <button>Submit</button>
+<div class="wrapper">
+    <form class="contact-form" action="mailto:gabrieldtedja@gmail.com" method="POST" enctype="text/plain">
+
+        <label class="row" for="email">Email<input name="email" type="email" id="email"></label>
+        
+        
+
+        <label class="row" for="subject">Subject<input name="subject" id="subject"></label>
+        
+
+        <label class="row" for="body">Body Text<textarea name="body" id="body"></textarea></label>
+        
+        
+        
+        <button class="row">Submit</button>
+        
     </form>
+</div>
 </body>
 </html>

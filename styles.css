@@ -17,6 +17,9 @@ nav {
   border-bottom-color:oklch(90% 3% 200);
 }
 
+h1 {
+  font-size:400%;
+} 
 
 nav a{
   flex:1;
@@ -40,3 +43,65 @@ nav a:hover {
   border-bottom: 0.2em solid oklch(76.264% 0.12187 275.411);
 }
 
+form {
+
+  margin-inline: auto;
+}
+
+form input, label, button, textarea {
+  display:block;
+  font:inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display:grid;
+  grid-template-columns: auto 1fr;
+  gap:1em;
+}
+
+.contact-form {
+  display:grid;
+  grid-template-columns: 10ch 1fr;
+  gap: 1rem 1ch;
+  margin-inline:auto;
+}
+
+.contact-form .row {
+  display:grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+
+
+.projects {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  grid-template-rows:subgrid;
+  grid-row: span 3;
+  margin: 0;
+  
+}
+
+.projects article h2 {
+  margin: 0;
+}
+
+.resume {
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects article {
+  grid-template-rows:subgrid;
+  grid-row: span 3;
+  margin: 0;
+  
+}
