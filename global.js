@@ -21,12 +21,16 @@ let select = document.querySelector(".color-scheme select");
 
 if ("colorScheme" in localStorage) {
     select.value = localStorage.colorScheme
-    document.documentElement.style.setProperty("color-scheme", value);
+    document.documentElement.style.setProperty("color-scheme", choice);
 }
 
 select.addEventListener("input", (e) => {
   const choice = e.target.value;            
-  document.documentElement.style.setProperty("color-scheme", value);           
+  if (choice === "auto") {
+    document.documentElement.style.removeProperty("color-scheme");
+  } else {
+    document.documentElement.style.setProperty("color-scheme", choice);
+  }     
   localStorage.colorScheme = choice;        
 });
 

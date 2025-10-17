@@ -1,5 +1,6 @@
 html {
   color-scheme: light dark;
+  position: relative;
 }
 
 
@@ -118,7 +119,6 @@ form input, label, button, textarea {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  left: auto;
   font-size:  80%;
   font-family: inherit;
 }
