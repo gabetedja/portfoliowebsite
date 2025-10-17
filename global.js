@@ -4,6 +4,31 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+	<label class="color-scheme">
+		Theme:
+		<select>
+			<option value="automatic" selected>Automatic</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+		</select>
+	</label>`,
+);
+
+let select = document.querySelector(".color-scheme select");
+
+if ("colorScheme" in localStorage) {
+    select.value = localStorage.colorScheme
+    document.documentElement.style.setProperty("color-scheme", value);
+}
+
+select.addEventListener("input", (e) => {
+  const choice = e.target.value;            
+  document.documentElement.style.setProperty("color-scheme", value);           
+  localStorage.colorScheme = choice;        
+});
 
 let pages = [
   { url: '/portfoliowebsite/', title: 'Home Page' },
