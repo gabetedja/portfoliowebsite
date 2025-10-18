@@ -3,8 +3,6 @@ html {
   position: relative;
 }
 
-
-
 body {
   /* Set line height to 1.5 times the font size
 	   and use the OS’s UI font as the website font
@@ -118,7 +116,8 @@ form input, label, button, textarea {
 .color-scheme {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   font-size:  80%;
   font-family: inherit;
 }
+
