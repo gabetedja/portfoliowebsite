@@ -4,36 +4,6 @@ function $$(selector, context = document) {
   return Array.from(context.querySelectorAll(selector));
 }
 
-document.body.insertAdjacentHTML(
-  'afterbegin',
-  `
-	<label class="color-scheme">
-		Theme:
-		<select>
-			<option value="auto" selected>Automatic</option>
-            <option value="light">Light</option>
-            <option value="dark">Dark</option>
-		</select>
-	</label>`,
-);
-
-let select = document.querySelector(".color-scheme select");
-
-if ("colorScheme" in localStorage) {
-    select.value = localStorage.colorScheme
-    document.documentElement.style.setProperty("color-scheme", select.value);
-}
-
-select.addEventListener("input", (e) => {
-  const choice = e.target.value;            
-  if (choice === "auto") {
-    document.documentElement.style.removeProperty("color-scheme");
-  } else {
-    document.documentElement.style.setProperty("color-scheme", choice);
-  }     
-  localStorage.colorScheme = choice;        
-});
-
 let pages = [
   { url: '/portfoliowebsite/', title: 'Home Page' },
   { url: '/portfoliowebsite/projects/', title: 'Projects' },
@@ -73,6 +43,39 @@ if (currentLink) {
  // or if (currentLink !== undefined)
  currentLink.classList.add('current');
 }
+
+
+
+
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+	<label class="color-scheme">
+		Theme:
+		<select>
+			<option value="auto" selected>Automatic</option>
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+		</select>
+	</label>`,
+);
+
+let select = document.querySelector(".color-scheme select");
+
+if ("colorScheme" in localStorage) {
+    select.value = localStorage.colorScheme
+    document.documentElement.style.setProperty("color-scheme", select.value);
+}
+
+select.addEventListener("input", (e) => {
+  const choice = e.target.value;            
+  if (choice === "auto") {
+    document.documentElement.style.removeProperty("color-scheme");
+  } else {
+    document.documentElement.style.setProperty("color-scheme", choice);
+  }     
+  localStorage.colorScheme = choice;        
+});
 
 
 
