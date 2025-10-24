@@ -94,6 +94,7 @@ export async function fetchJSON(url) {
 
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
+  
   const article = document.createElement('article');
   article.innerHTML = `
     <${headingLevel}>${project.title}</${headingLevel}>
@@ -101,7 +102,4 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     <p>${project.description}</p>
 `;
 containerElement.appendChild(article);
-
-
-
 }
