@@ -1,4 +1,4 @@
 import { fetchJSON, renderProjects } from '../global.js';
 const projects = await fetchJSON('../lib/projects.json');
-const projectsContainer = document.querySelector('.projects');
-renderProjects(projects, projectsContainer, 'h2');
+const container = document.querySelector('.projects');
+projects.forEach(p => renderProjects(p, container, 'h2'));
