@@ -93,7 +93,7 @@ export async function fetchJSON(url) {
 }
 
 export function renderProjects(project, containerElement, headingLevel = 'h2') {
-  containerElement.innerHTML = '';
+
   
   const article = document.createElement('article');
   article.innerHTML = `
