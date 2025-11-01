@@ -120,4 +120,71 @@ form input, label, button, textarea {
   font-size:  80%;
   font-family: inherit;
 }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
 
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.legend {
+  flex: 1;
+  min-width: 12em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5rem 1rem;
+  list-style: none;
+  border: 1px solid black;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-top: 0; 
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 4px;
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+path.selected { stroke:#000; stroke-width:2px; }
+
+.legend-item.selected { font-weight:600; }
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
