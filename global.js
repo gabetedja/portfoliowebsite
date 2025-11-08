@@ -9,7 +9,8 @@ let pages = [
   { url: '/portfoliowebsite/projects/', title: 'Projects' },
   { url: '/portfoliowebsite/contact/', title: 'Contact' },
   { url: 'https://github.com/gabetedja/', title: 'Github' },
-  { url: '/portfoliowebsite/resume/', title: 'Resume' },
+  { url: '/portfoliowebsite/meta/', title: 'Meta' },
+  { url: '/portfoliowebsite/resume/', title: 'Resume' }
 ];
 
 let nav = document.createElement('nav');
