@@ -66,9 +66,9 @@
         "description": "To-Do List with Django Backend"
     },
     {
-        "title": "DSC30 - Pandas Simulation",
+        "title": "DSC106 - Bikewatching",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Rudimentary simulation of a pandas series/dataframe in Java"
+        "description": "Bike traffic in Massachusetts"
     }
 ]
