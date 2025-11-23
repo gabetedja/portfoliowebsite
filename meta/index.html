@@ -10,10 +10,19 @@
 <body>
     <h1>Meta</h1>
     <p>This page includes stats on the code of the website.</p>
-    <div id="stats"></div>
+    <div id="stats">
     
     <h2>Commits by time of day</h2>
-<div id="chart"></div>
+
+<!-- old code -->
+<div id="scrolly-1">
+  <div id="scatter-story">some filler text here</div>
+  <div id="scatter-plot">
+    <div id="chart"></div>  
+  </div>
+</div>
+<!-- old code -->
+
 
 <p id="selection-count">No commits selected</p>
 
@@ -31,7 +40,22 @@
 
 <dl id="language-breakdown" class="stats"></dl>
 
+<label>Show commits until
+<input id="commit-progress" type="range" min="0" max="100" step="1"></input>
+<time id="commit-time"></time>
+</label>
 
+<dl id="files">
+  <!-- we want the following structure for each file:
+  <div>
+    <dt>
+      <code>{file.name}</code>
+    </dt>
+    <dd>{file.lines.length} lines</dd>
+  </div>
+  -->
+</dl> 
+</div>
 
 <script type="module" src="../global.js"></script>
 <script type="module" src="main.js" defer></script>
